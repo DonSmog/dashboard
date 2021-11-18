@@ -1,0 +1,21 @@
+[
+  {
+    "image": "https://thispersondoesnotexist.com/image?1637253184145",
+    "content": "Micheal liked you!",
+    "time": "About 20 minutes ago",
+    "icon": "fas fa-heart",
+    "color": "grey"
+  },
+  {
+    "image": "https://thispersondoesnotexist.com/image?1637253173364",
+    "content": "Jack liked you!",
+    "time": "About 40 minutes ago",
+    "icon": "fas fa-heart"
+  },
+  {
+    "image": "https://thispersondoesnotexist.com/image?1637253110711",
+    "content": "Martin commented on your photo!",
+    "time": "About 56 minutes ago",
+    "icon": "fas fa-comment-alt"
+  }
+]
