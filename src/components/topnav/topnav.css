@@ -1,0 +1,128 @@
+.topnav {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--topnav-height);
+}
+
+.topnav_search {
+  position: relative;
+  height: 50px;
+  width: 75%;
+  background-color: var(--main-bg);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.button {
+  padding: 0.3rem 1.5rem;
+  border: darkblue solid 0.2rem;
+  border-radius: var(--border-radius);
+  background-color: darkblue;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.topnav_search > input {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  border: none;
+  color: var(--txt-color);
+  background-color: var(--main-bg);
+}
+
+.topnav_search > i {
+  font-size: 1.2rem;
+}
+
+.topnav_right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 25%;
+}
+
+.notifications {
+  display: grid;
+  grid-template-columns: 15% 70% 10%;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+  border-bottom: whitesmoke 0.15rem solid;
+}
+.notifications img {
+  height: 30px;
+  border-radius: 50%;
+}
+.notification_text {
+  font-size: 1rem;
+  text-align: left;
+}
+.notification_text h5 {
+  font-size: 1rem;
+  color: darkblue;
+}
+.notification_text p {
+  font-size: 0.8rem;
+}
+.notifications i {
+  font-size: 1.2rem;
+  color: red;
+}
+
+.notifications:hover {
+  background-color: var(--second-bg);
+  cursor: pointer;
+}
+
+.topnav_user {
+  display: flex;
+  align-items: center;
+}
+
+.topnav_user_image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.topnav_user_image > img {
+  width: 100%;
+}
+
+.topnav_user_name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: darkblue;
+}
+.topnav_user_name i {
+  margin-left: 0.3rem;
+  font-size: 0.6rem;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: 25% 70%;
+  flex-direction: row;
+  width: 150px;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+  border-bottom: whitesmoke 0.15rem solid;
+}
+.user img {
+  height: 30px;
+  border-radius: 50%;
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "icon": "fas fa-user",
+    "content": "Profile"
+  },
+  {
+    "icon": "fas fa-wallet",
+    "content": "My Wallet"
+  },
+  {
+    "icon": "fas fa-cog",
+    "content": "Settings"
+  },
+  {
+    "icon": "fas fa-sign-out-alt",
+    "content": "Logout"
+  }
+]
