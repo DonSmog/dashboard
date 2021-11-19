@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 import "./topnav.css";
 import Dropdown from "../dropdown/Dropdown";
 import Notifications from "../../assets/Data/notification.json";
 import user_menu from "../../assets/Data/user_menus.json";
+import { useAppContext } from "../../provider/AppProvider.context";
 
 const userImage = "https://thispersondoesnotexist.com/image?1637253184145";
 
@@ -48,11 +48,52 @@ const renderUserMenu = (item, index) => (
 );
 
 const TopNav = () => {
+  const { setImages } = useAppContext();
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const url =
+    "https://api.unsplash.com/search/photos?page=1&query=" +
+    searchTerm +
+    "&client_id=" +
+    process.env.REACT_APP_UNSPLASH_CLIENT_ID;
+
+  const getData = () => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        searchTerm && setImages(data.results);
+      });
+  };
+
+  useEffect(() => {
+    getData();
+    // eslint-disable-next-line
+  }, []);
+
+  const handleOnChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+
+    if (searchTerm) {
+      getData(url);
+
+      setSearchTerm("");
+    }
+  };
+
   return (
     <div className="topnav">
-      <form className="topnav_search">
+      <form onSubmit={handleOnSubmit} className="topnav_search">
         <i className="fas fa-search"></i>
-        <input type="text" placeholder="Find Something..." />
+        <input
+          onChange={handleOnChange}
+          type="text"
+          value={searchTerm}
+          placeholder="Find Something..."
+        />
         <button type="submit" className="button">
           Search
         </button>

@@ -1,14 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "./assets/css/grid.css";
 import "./assets/css/index.css";
 
-import Layout from "./components/layout/Layout";
+import Dashboard from "./pages/Dashboard";
+import Message from "./pages/Message";
+import AppProvider from "./provider/AppProvider.context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Layout />
+    <BrowserRouter>
+      <Switch>
+        <AppProvider>
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/message" exact component={Message} />
+        </AppProvider>
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

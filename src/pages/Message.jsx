@@ -1,7 +1,8 @@
 import React from "react";
+import Layout from "../components/layout/Layout";
 
 const Message = () => {
-  return <div>Message</div>;
+  return <Layout>Message</Layout>;
 };
 
 export default Message;

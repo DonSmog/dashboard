@@ -1,0 +1,75 @@
+.cards {
+  display: flex;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+.cards img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.likes {
+  display: none;
+  padding-bottom: 5px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: #fff;
+  bottom: 50px;
+  justify-content: space-between;
+  align-items: left;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+.details:hover + .likes {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  color: darkblue;
+  position: absolute;
+  bottom: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.details:hover {
+  color: darkblue;
+  background-color: white;
+  width: 100%;
+}
+.details h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.details p {
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.details p i {
+  padding-right: 5px;
+}
+
+.likes i {
+  font-size: 0.9rem;
+  color: #fff;
+}
+.like {
+  padding: 0.3rem 1.5rem;
+  background-color: darkred;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.dislike {
+  padding: 0.3rem 1.5rem;
+  background-color: darkblue;
+  border-radius: 5px;
+}

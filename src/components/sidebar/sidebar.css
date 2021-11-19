@@ -35,8 +35,9 @@
   font-weight: 600;
 }
 .sidebar_item-inner {
+  display: grid;
+  grid-template-columns: 25% 70%;
   padding: 10px 15px;
-  display: flex;
   justify-content: left;
   align-items: left;
   text-align: left;
@@ -59,7 +60,7 @@
   color: var(--main-color);
 }
 
-.sidebar_item-inner.active {
+.active .sidebar_item-inner {
   border-radius: var(--border-radius);
   background-image: linear-gradient(
     to right,

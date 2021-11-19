@@ -1,29 +1,17 @@
 import React from "react";
 import "./layout.css";
-
 import Sidebar from "../sidebar/Sidebar";
-import Redirect from "../Redirect";
 import TopNav from "../topnav/TopNav";
 
-import { BrowserRouter, Route } from "react-router-dom";
-
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
-    <BrowserRouter>
-      <Route
-        render={(props) => (
-          <div className="layout">
-            <Sidebar {...props} />
-            <div className="layout_content">
-              <TopNav />
-              <div className="layout_content-main">
-                <Redirect />
-              </div>
-            </div>
-          </div>
-        )}
-      />
-    </BrowserRouter>
+    <div className="layout">
+      <Sidebar />
+      <div className="layout_content">
+        <TopNav />
+        <div className="layout_content-main">{children}</div>
+      </div>
+    </div>
   );
 };
 
