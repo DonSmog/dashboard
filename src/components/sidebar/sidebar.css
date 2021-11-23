@@ -8,6 +8,13 @@
   box-shadow: var(--box-shadow);
 }
 
+/* media query
+@media (max-width: 810px) {
+  .sidebar {
+    width: 5px;
+  }
+} */
+
 .sidebar_logo {
   height: 60px;
   display: flex;
