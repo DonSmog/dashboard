@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import "./assets/css/grid.css";
 import "./assets/css/index.css";
 
 import Dashboard from "./pages/Dashboard";
